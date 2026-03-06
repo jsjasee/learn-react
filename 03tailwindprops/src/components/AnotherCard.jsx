@@ -23,7 +23,7 @@ function AnotherCard({ username = "Lemons", album = "Not decided yet" }) {
         <span className="font-medium text-sky-500">{album}</span>
 
         <span className="flex gap-2 font-medium text-gray-600 dark:text-gray-400">
-          <span>No. 4</span>
+          <span>{album[0] === "midnight sun" ? "No. 1" : "undetermined"}</span>
           <span>·</span>
           <span>2025</span>
         </span>

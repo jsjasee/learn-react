@@ -21,6 +21,7 @@ function App() {
 
     // // method 2 (HOW COME THIS DOESN'T WORK? it still retains the old value of counter??)
     // counter--;
+    // console.log(counter);
     // setCounter(counter);
 
     // method 3 - pass the updated value of counter

@@ -24,7 +24,7 @@ function App() {
     if (charAllowed) str += "!@#$%^&*()_+";
 
     for (let i = 1; i < length; i++) {
-      const char = Math.floor(Math.random() * str.length + 1); // we plus 1 in case to capture the last character in the string in case it is like 24.99 and there are 25 characters, when we floor, it is 24 but + 1 then floor it is 25???
+      const char = Math.floor(Math.random() * str.length);
 
       pass += str.charAt(char); // finds a character at a position, and the char here is acting as the index
     }

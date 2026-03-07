@@ -17,7 +17,6 @@ function useCurrencyInfo(currency) {
   }, [currency]); // any change in currency, re-fire this function
 
   console.log(data);
-
   return data;
 }
 

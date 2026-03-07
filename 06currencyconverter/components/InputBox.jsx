@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 
 function InputBox({
   label,
@@ -11,11 +11,20 @@ function InputBox({
   currencyDisabled = false,
   className = "", // gives user a chance to customise the input box with their own classes
 }) {
+  // there's another hook called 'useId' to generate a unique id? i can run it multiple times? like a currencyId.. amountId.. or smth?
+  const id = useId();
+
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       <div className="w-1/2">
-        <label className="text-black/40 mb-2 inline-block">{label} </label>
+        <label
+          htmlFor={id} // what is this htmlFor property?? like when i click on this label, it will auto-highlight the corresponding input with the id of the same name?
+          className="text-black/40 mb-2 inline-block"
+        >
+          {label}
+        </label>
         <input
+          id={id}
           type="number"
           className="outline-none w-full bg-transparent py-1.5"
           placeholder="Amount"

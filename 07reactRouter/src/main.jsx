@@ -14,6 +14,7 @@ import {
 import Contact from "./components/Contact/Contact.jsx";
 import User from "./components/User/User.jsx";
 import Github, { githubInfoLoader } from "./components/Github/Github.jsx";
+import UserChild from "./components/User/UserChild.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
         happens if the route is only "/user"? page will error. so this route
         will sandwich the :userid route below to capture both cases, to ensure a
         page serves for both routes.
-        <Route path=":userid" element={<User />} />
+        <Route path=":userid" element={<UserChild />} />
       </Route>
       <Route loader={githubInfoLoader} path="github" element={<Github />} /> //
       if someone is trying to load the route, use the githubInfoLoader, but how
